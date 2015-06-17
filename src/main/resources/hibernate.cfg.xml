@@ -29,8 +29,10 @@
         <mapping class="com.jordiarjan.exercise5.Entities.PaymentData"/>
         <mapping class="com.jordiarjan.exercise5.Entities.IDeal"/>
         <mapping class="com.jordiarjan.exercise5.Entities.CreditCard"/>
+        <mapping class="com.jordiarjan.exercise5.Entities.Offer"/>
         <mapping class="com.jordiarjan.exercise5.Entities.Advertisement"/>
         <mapping class="com.jordiarjan.exercise5.Entities.AdvertisementReaction"/>
+        <mapping class="com.jordiarjan.exercise5.Entities.Category"/>
 
     </session-factory>
 </hibernate-configuration>

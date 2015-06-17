@@ -11,7 +11,7 @@ import java.sql.Date;
 public class Offer {
 
     @Id @GeneratedValue
-    private long Id;
+    private long id;
 
     private int price;
 
@@ -19,4 +19,7 @@ public class Offer {
 
     @ManyToOne
     private User user;
+
+    @ManyToOne
+    private Advertisement advertisement;
 }

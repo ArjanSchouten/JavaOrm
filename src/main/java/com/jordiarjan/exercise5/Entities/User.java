@@ -12,7 +12,7 @@ import java.util.List;
 public class User {
 
     @Id @GeneratedValue
-    private Long Id;
+    private Long id;
 
     @Column(name = "firstname")
     private String firstName;
@@ -26,8 +26,11 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<PaymentData> paymentdatas = new ArrayList();
 
+    @OneToMany(mappedBy = "sellingUser")
+    private List<Advertisement> advertisements = new ArrayList<>();
+
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public String getFirstName() {
@@ -47,7 +50,7 @@ public class User {
     }
 
     public void setId(Long id) {
-        Id = id;
+        id = id;
     }
 
     public void setFirstName(String firstName) {

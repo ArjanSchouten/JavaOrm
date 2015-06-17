@@ -31,6 +31,18 @@ public abstract class Advertisement {
     @Column( name="startDate")
     private Date startDate;
 
+    @ManyToOne
+    private User sellingUser;
+
+    @ManyToOne
+    private User purchasingUser;
+
     @OneToMany(mappedBy = "advertisement")
     private List<AdvertisementReaction> reactions;
+
+    @OneToOne
+    private Offer succesfullOffer;
+
+    @ManyToOne
+    private Category category;
 }

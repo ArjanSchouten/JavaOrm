@@ -22,4 +22,7 @@ public abstract class AdvertisementReaction {
 
     @ManyToOne
     private Advertisement advertisement;
+
+    @ManyToOne
+    private User user;
 }
