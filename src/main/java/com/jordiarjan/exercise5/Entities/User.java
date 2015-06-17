@@ -23,7 +23,8 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    private List<PaymentData> paymentdatas = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    private List<PaymentData> paymentdatas = new ArrayList();
 
     public Long getId() {
         return Id;
