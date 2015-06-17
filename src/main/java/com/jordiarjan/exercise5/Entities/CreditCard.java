@@ -9,7 +9,6 @@ import javax.persistence.*;
 @Table(name = "creditcard")
 @PrimaryKeyJoinColumn(name = "payment_data_id", referencedColumnName = "id")
 public class CreditCard extends PaymentData {
-
     @Column
     private String bankName;
 }
