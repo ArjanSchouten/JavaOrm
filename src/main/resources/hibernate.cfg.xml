@@ -13,13 +13,13 @@
 
         <!-- Assume test is the database name -->
         <property name="hibernate.connection.url">
-            jdbc:mysql://url/db
+            jdbc:mysql://arjan-schouten.nl/opdracht2
         </property>
         <property name="hibernate.connection.username">
-            user
+            myuser
         </property>
         <property name="hibernate.connection.password">
-            pass
+            mypass
         </property>
         <property name="hibernate.current_session_context_class">thread</property>
 
@@ -29,6 +29,8 @@
         <mapping class="com.jordiarjan.exercise5.Entities.PaymentData"/>
         <mapping class="com.jordiarjan.exercise5.Entities.IDeal"/>
         <mapping class="com.jordiarjan.exercise5.Entities.CreditCard"/>
+        <mapping class="com.jordiarjan.exercise5.Entities.Advertisement"/>
+        <mapping class="com.jordiarjan.exercise5.Entities.AdvertisementReaction"/>
 
     </session-factory>
 </hibernate-configuration>
