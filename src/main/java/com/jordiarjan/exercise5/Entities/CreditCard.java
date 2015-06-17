@@ -11,4 +11,12 @@ import javax.persistence.*;
 public class CreditCard extends PaymentData {
     @Column
     private String bankName;
+
+    public String getBankName() {
+        return bankName;
+    }
+
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
 }

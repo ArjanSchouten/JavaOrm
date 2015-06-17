@@ -1,5 +1,7 @@
 package com.jordiarjan.exercise5.Entities;
 
+import org.hibernate.validator.constraints.Email;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +18,14 @@ public class User {
 
     @Column(name = "firstname")
     private String firstName;
+
     @Column(name = "lastname")
     private String lastName;
+
     @Column(name = "email")
+    @Email
     private String email;
+
     @Column(name = "password")
     private String password;
 
@@ -37,6 +43,22 @@ public class User {
         return firstName;
     }
 
+    public List<PaymentData> getPaymentdatas() {
+        return paymentdatas;
+    }
+
+    public void addPaymentData(PaymentData paymentdata) {
+        this.paymentdatas.add(paymentdata);
+    }
+
+    public List<Advertisement> getAdvertisements() {
+        return advertisements;
+    }
+
+    public void setAdvertisements(List<Advertisement> advertisements) {
+        this.advertisements = advertisements;
+    }
+
     public String getLastName() {
         return lastName;
     }
@@ -47,10 +69,6 @@ public class User {
 
     public String getPassword() {
         return password;
-    }
-
-    public void setId(Long id) {
-        id = id;
     }
 
     public void setFirstName(String firstName) {

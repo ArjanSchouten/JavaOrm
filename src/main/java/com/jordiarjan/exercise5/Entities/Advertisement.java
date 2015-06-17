@@ -2,7 +2,7 @@ package com.jordiarjan.exercise5.Entities;
 
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Entity
 @Table(name="advertisement")
-public abstract class Advertisement {
+public class Advertisement {
 
     @Id @GeneratedValue
     private Long id;
@@ -45,4 +45,88 @@ public abstract class Advertisement {
 
     @ManyToOne
     private Category category;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getStartPrice() {
+        return startPrice;
+    }
+
+    public void setStartPrice(int startPrice) {
+        this.startPrice = startPrice;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public User getSellingUser() {
+        return sellingUser;
+    }
+
+    public void setSellingUser(User sellingUser) {
+        this.sellingUser = sellingUser;
+    }
+
+    public User getPurchasingUser() {
+        return purchasingUser;
+    }
+
+    public void setPurchasingUser(User purchasingUser) {
+        this.purchasingUser = purchasingUser;
+    }
+
+    public List<AdvertisementReaction> getReactions() {
+        return reactions;
+    }
+
+    public void setReactions(List<AdvertisementReaction> reactions) {
+        this.reactions = reactions;
+    }
+
+    public Offer getSuccesfullOffer() {
+        return succesfullOffer;
+    }
+
+    public void setSuccesfullOffer(Offer succesfullOffer) {
+        this.succesfullOffer = succesfullOffer;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 }
